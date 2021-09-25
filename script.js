@@ -1,15 +1,14 @@
 "use strict";
-/********************
-Download TypeScript
-********************/
-// npm -g install typescript
-/********************
-Compile TypeScript into JavaScript
-********************/
-// tsc nameOfFile.js
-/********************
-run tsc init
-********************/
-/********************
-tsc --watch
-********************/
+var bankAccount = {
+    money: 2000,
+    deposit: function (value) {
+        this.money += value;
+    },
+};
+var myself = {
+    name: "Max",
+    bankAccount: bankAccount,
+    hobbies: ["Sport", "Cooking"],
+};
+myself.bankAccount.deposit(3000);
+console.log(myself);
